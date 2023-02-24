@@ -6,41 +6,28 @@ const getRandom = (num) => {
     
 };
 
+console.log(getRandom(5))
 
 //Array
-const moodArray = {
-    color: ['Red','Blue','Green','Yellow','Orange','Violet'],
-    mood: ['Happy','Sad','Shy','Confused','Confident'],
-    shape: ['Circle','Square','Triangle','Trapizod','Star']
+const moodArray = [
+    color = ['Red','Blue','Green','Yellow','Orange','Violet'],
+    mood = ['Happy','Sad','Shy','Confused','Confident'],
+    shape = ['Circle','Square','Triangle','Trapizod','Star']
 
-};
+];
 
-let finalResult = [];
+const finalResult = [];
 
-for(let item in moodArray) {
-    let x = getRandom(moodArray[item].length)
+for(const item in moodArray){
+    const x = getRandom(moodArray[item].length)
+    console.log(x)
+}
 
-switch (item) {
+switch (moodArray) {
     case 'color':
-        finalResult.push(`Your color is ${moodArray[item][x]}`)
-        break;
-    case 'mood':
-        finalResult.push(`Your mood is ${moodArray[item][x]}`)
-        break;
-    case 'shape':
-        finalResult.push(`Your shape is ${moodArray[item][x]}`)
-        break;
-    default:
-        return null
-    }
+        return `Your color is ${getRandom([item][x])}`
 }
 
 
 
 
-const joinResult = (result) =>{
-    const y = finalResult.join('\n');
-    console.log(y)
-}
-
-joinResult(finalResult);
